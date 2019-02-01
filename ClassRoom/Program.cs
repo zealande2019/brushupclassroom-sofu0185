@@ -15,6 +15,17 @@ namespace ClassRoom
                 new Studerende("Sofus", 12, 11),
                 new Studerende("Tom plads 1", 0, 0),
                 new Studerende("Tom plads 2", 0, 0) });
+            
+
+            Console.WriteLine($"KlasseNavn: {kr.KlasseNavn}");
+            Console.WriteLine($"SemesterStart: {kr.SemesterStart}");
+            Console.WriteLine($"Klasseliste: ");
+            foreach (Studerende s in kr.Klasseliste)
+            {
+                Console.WriteLine($"\tNavn: {s.Navn}; Fødselsdato: {s.Fødselsdag}/{s.Fødselsmåned}");
+            }
+
+            Console.ReadKey();
         }
     }
 }
