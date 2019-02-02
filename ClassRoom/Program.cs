@@ -13,7 +13,7 @@ namespace ClassRoom
             KlasseRum kr = new KlasseRum("3B", new DateTime(2018, 9, 4));
             kr.Klasseliste.AddRange(new Studerende[] {
                 new Studerende("Sofus", 12, 11),
-                new Studerende("Tom plads 1", 1, 1),
+                new Studerende("Tom plads 1", 2, 1),
                 new Studerende("Tom plads 2", 1, 1) });
             
 

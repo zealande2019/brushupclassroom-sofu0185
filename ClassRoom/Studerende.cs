@@ -14,6 +14,8 @@ namespace ClassRoom
 
         public Studerende(string navn, int fødselsmåned, int fødselsdag)
         {
+            if (fødselsmåned > 12 || fødselsmåned < 1)
+                throw new ArgumentOutOfRangeException("fødselsmåned", "fødselsmåned angivet er ikke valid.");
             Navn = navn;
             Fødselsmåned = fødselsmåned;
             Fødselsdag = fødselsdag;

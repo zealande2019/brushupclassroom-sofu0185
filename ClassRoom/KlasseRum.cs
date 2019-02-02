@@ -39,8 +39,6 @@ namespace ClassRoom
                     case "Efterår":
                         efterår++;
                         break;
-                    default:
-                        throw new Exception("No valid season");
                 }
             }
 

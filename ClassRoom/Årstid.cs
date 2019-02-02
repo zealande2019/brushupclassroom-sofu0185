@@ -29,7 +29,7 @@ namespace ClassRoom
                 case 11:
                     return "Efterår";
                 default:
-                    return null;
+                    throw new ArgumentOutOfRangeException("fødselsmåned", "fødselsmåned angivet er ikke valid.");
             }
         }
     }
