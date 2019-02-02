@@ -13,8 +13,8 @@ namespace ClassRoom
             KlasseRum kr = new KlasseRum("3B", new DateTime(2018, 9, 4));
             kr.Klasseliste.AddRange(new Studerende[] {
                 new Studerende("Sofus", 12, 11),
-                new Studerende("Tom plads 1", 0, 0),
-                new Studerende("Tom plads 2", 0, 0) });
+                new Studerende("Tom plads 1", 1, 1),
+                new Studerende("Tom plads 2", 1, 1) });
             
 
             Console.WriteLine($"KlasseNavn: {kr.KlasseNavn}");
@@ -24,6 +24,8 @@ namespace ClassRoom
             {
                 Console.WriteLine($"\tNavn: {s.Navn}; Fødselsdato: {s.Fødselsdag}/{s.Fødselsmåned}");
             }
+
+            kr.HowManyBornInSeason();
 
             Console.ReadKey();
         }

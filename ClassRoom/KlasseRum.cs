@@ -18,5 +18,33 @@ namespace ClassRoom
             KlasseNavn = klasseNavn;
             SemesterStart = semesterStart;
         }
+
+        public void HowManyBornInSeason()
+        {
+            int vinter = 0, forår = 0, sommer = 0, efterår = 0;
+
+            foreach (Studerende s in Klasseliste)
+            {
+                switch (Årstid.GetÅrstid(s.Fødselsmåned))
+                {
+                    case "Vinter":
+                        vinter++;
+                        break;
+                    case "Forår":
+                        forår++;
+                        break;
+                    case "Sommer":
+                        sommer++;
+                        break;
+                    case "Efterår":
+                        efterår++;
+                        break;
+                    default:
+                        throw new Exception("No valid season");
+                }
+            }
+
+            Console.WriteLine($"Vinter: {vinter}; Forår: {forår}; Sommer: {sommer}; Efterår: {efterår}");
+        }
     }
 }
