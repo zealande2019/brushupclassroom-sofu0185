@@ -21,28 +21,16 @@ namespace ClassRoom
 
         public void HowManyBornInSeason()
         {
-            int vinter = 0, forår = 0, sommer = 0, efterår = 0;
+            var c = Klasseliste.GroupBy(
+                x => Årstid.GetÅrstid(x.Fødselsmåned),
+                (k, kl) => new {Årstid = k, Count = kl.Count()});
 
-            foreach (Studerende s in Klasseliste)
+            // uses foreach to print the result to the console
+            foreach (var a in c)
             {
-                switch (Årstid.GetÅrstid(s.Fødselsmåned))
-                {
-                    case "Vinter":
-                        vinter++;
-                        break;
-                    case "Forår":
-                        forår++;
-                        break;
-                    case "Sommer":
-                        sommer++;
-                        break;
-                    case "Efterår":
-                        efterår++;
-                        break;
-                }
+                Console.Write($"{a.Årstid}: {a.Count}; ");
             }
-
-            Console.WriteLine($"Vinter: {vinter}; Forår: {forår}; Sommer: {sommer}; Efterår: {efterår}");
+            Console.WriteLine();
         }
     }
 }

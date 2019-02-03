@@ -14,7 +14,9 @@ namespace ClassRoom
             kr.Klasseliste.AddRange(new Studerende[] {
                 new Studerende("Sofus", 12, 11),
                 new Studerende("Tom plads 1", 2, 1),
-                new Studerende("Tom plads 2", 1, 1) });
+                new Studerende("Tom plads 2", 1, 1),
+                new Studerende("Forårs barn", 5, 2)
+            });
             
 
             Console.WriteLine($"KlasseNavn: {kr.KlasseNavn}");
